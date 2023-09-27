@@ -6,7 +6,7 @@
 #    By: jreix-ch <jreix-ch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 16:55:07 by jreix-ch          #+#    #+#              #
-#    Updated: 2023/09/27 21:09:03 by jreix-ch         ###   ########.fr        #
+#    Updated: 2023/09/27 21:24:17 by jreix-ch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,8 @@ class TestBSQ(unittest.TestCase):
     def test_normal_maps(self):
         for size, name in [(10, "10x10"), (50, "50x50"), (100, "100x100"), (1000, "1000x1000")]:
             map_file = self.generate_map_file(size, size)
-            self.compare_outputs([map_file], print_time=name)
+            expected_stdout = self.solve_map(map_file)
+            self.compare_outputs([map_file], expected_output=expected_stdout, print_time=name)
             os.remove(map_file)
 
     def test_unsolvable_map(self):
