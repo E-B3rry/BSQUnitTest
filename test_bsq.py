@@ -6,7 +6,7 @@
 #    By: jreix-ch <jreix-ch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/27 16:55:07 by jreix-ch          #+#    #+#              #
-#    Updated: 2023/09/27 21:24:17 by jreix-ch         ###   ########.fr        #
+#    Updated: 2023/09/27 22:16:16 by jreix-ch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ from map_parser import parse_map
 from map_generator import generate_map
 
 
-BSQ_PATH = "bsq"  # Relative or absolute path to binary
+BSQ_PATH = "./bsq"  # Relative or absolute path to binary
 TIMEOUT = 10  # No more than 10 seconds per test
 # This line below defines the seed used for random map generation
 # The seed is randomized by default, but the used seed always shown at test start
